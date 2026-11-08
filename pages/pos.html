@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexander Shop — Sales / POS</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pos.css" />
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff"><path d="M3 9h18L12 2 3 9zm0 0v11a1 1 0 001 1h5v-5h6v5h5a1 1 0 001-1V9"/></svg>
+      </div>
+      <div class="brand-text"><h1>Alexander</h1><span>Shop Management</span></div>
+    </div>
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Main Menu</span>
+      <a href="../index.html" class="nav-item" data-page="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a href="pos.html" class="nav-item active" data-page="pos.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Sales / POS
+      </a>
+      <a href="products.html" class="nav-item" data-page="products.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        Products
+      </a>
+      <a href="purchases.html" class="nav-item" data-page="purchases.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M5 12H19M12 5l7 7-7 7"/></svg>
+        Purchases
+      </a>
+      <a href="customers.html" class="nav-item" data-page="customers.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        Customers
+      </a>
+      <a href="credits.html" class="nav-item" data-page="credits.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Credits
+        <span class="nav-badge">3</span>
+      </a>
+      <span class="nav-section-label">Analytics</span>
+      <a href="reports.html" class="nav-item" data-page="reports.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Reports
+      </a>
+      <span class="nav-section-label">System</span>
+      <a href="admin.html" class="nav-item" data-page="admin.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        Administration
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="user-avatar-sm">AO</div>
+        <div class="sidebar-user-info"><div class="name">Alexander O.</div><div class="role">Administrator</div></div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <button class="topbar-menu-btn" id="topbar-menu-btn" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-title">
+        <h2>Sales / POS</h2>
+        <p id="pos-date">Loading date…</p>
+      </div>
+      <div class="topbar-actions">
+        <button class="icon-btn" aria-label="Notifications">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          <span class="notif-dot"></span>
+        </button>
+        <div class="topbar-divider"></div>
+        <div class="topbar-profile" id="profile-btn">
+          <div class="avatar">AO</div>
+          <div class="profile-info"><div class="name">Alexander O.</div><div class="role">Administrator</div></div>
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div class="dropdown-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              My Profile
+            </div>
+            <div class="dropdown-separator"></div>
+            <div class="dropdown-item danger">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              Sign Out
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- POS LAYOUT -->
+    <main class="pos-layout" id="pos-layout">
+
+      <!-- LEFT: Product Search & Results -->
+      <div class="pos-catalog">
+
+        <!-- Invoice & Customer row -->
+        <div class="pos-top-row">
+          <div class="pos-invoice-badge" id="invoice-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span id="invoice-label">INV-000001</span>
+          </div>
+          <div style="flex:1;max-width:260px;position:relative;">
+            <select class="form-control" id="pos-customer" style="height:36px;font-size:.82rem;">
+              <option value="">Walk-in Customer</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Search -->
+        <div class="pos-search-wrap">
+          <div class="pos-search">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="search" id="product-search" placeholder="Search product by name, SKU or barcode…" autocomplete="off" />
+            <div id="search-spinner" style="display:none;position:absolute;right:12px;top:50%;transform:translateY(-50%);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" class="spin"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+          </div>
+          <!-- Category tabs -->
+          <div class="pos-category-tabs" id="category-tabs">
+            <button class="cat-tab active" data-cat="">All</button>
+            <button class="cat-tab" data-cat="Food">Food</button>
+            <button class="cat-tab" data-cat="Drinks">Drinks</button>
+            <button class="cat-tab" data-cat="Household">Household</button>
+            <button class="cat-tab" data-cat="Personal Care">Personal Care</button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-grid">
+          <div class="empty-state" style="grid-column:1/-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="48" height="48"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <h4>Loading products…</h4>
+            <p>Connecting to database</p>
+          </div>
+        </div>
+
+      </div><!-- /pos-catalog -->
+
+      <!-- RIGHT: Cart -->
+      <div class="pos-cart">
+
+        <div class="cart-header">
+          <h3>Current Order</h3>
+          <button class="btn btn-secondary btn-sm" id="clear-cart-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
+            Clear
+          </button>
+        </div>
+
+        <!-- Cart Items -->
+        <div class="cart-items" id="cart-items">
+          <div class="cart-empty" id="cart-empty">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <p>No items yet</p>
+            <span>Search or click a product to add</span>
+          </div>
+        </div>
+
+        <!-- Totals -->
+        <div class="cart-totals">
+          <div class="totals-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="totals-divider"></div>
+          <div class="totals-total">
+            <span>TOTAL</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="payment-method">
+          <div class="payment-label">Payment Method</div>
+          <div class="payment-options">
+            <label class="payment-opt">
+              <input type="radio" name="payment" value="cash" checked />
+              <span class="pay-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                Cash
+              </span>
+            </label>
+            <label class="payment-opt">
+              <input type="radio" name="payment" value="mobile_money" />
+              <span class="pay-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                Mobile
+              </span>
+            </label>
+            <label class="payment-opt">
+              <input type="radio" name="payment" value="card" />
+              <span class="pay-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                Card
+              </span>
+            </label>
+            <label class="payment-opt">
+              <input type="radio" name="payment" value="credit" />
+              <span class="pay-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Credit
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Cash Tendered (cash only) -->
+        <div class="cash-tender-row" id="cash-tender-row">
+          <div class="form-group" style="margin:0;flex:1;">
+            <label class="form-label">Amount Paid</label>
+            <input type="number" class="form-control" id="cash-tendered" placeholder="0.00" min="0" step="0.01" />
+          </div>
+          <div class="change-display">
+            <div class="change-label">Change</div>
+            <div class="change-amount" id="change-amount">$0.00</div>
+          </div>
+        </div>
+
+        <!-- Credit partial payment row -->
+        <div class="cash-tender-row" id="credit-partial-row" style="display:none;">
+          <div class="form-group" style="margin:0;flex:1;">
+            <label class="form-label">Down Payment (optional)</label>
+            <input type="number" class="form-control" id="credit-downpayment" placeholder="0.00" min="0" step="0.01" />
+          </div>
+          <div class="change-display">
+            <div class="change-label">Credit</div>
+            <div class="change-amount" id="credit-balance" style="color:var(--warning);">$0.00</div>
+          </div>
+        </div>
+
+        <!-- Complete Sale -->
+        <button class="btn btn-success btn-lg" id="complete-sale-btn" style="margin:8px 18px 4px;width:calc(100% - 36px);height:50px;font-size:.95rem;border-radius:8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Complete Sale
+        </button>
+        <button class="btn btn-secondary" id="hold-btn" style="margin:0 18px 16px;width:calc(100% - 36px);border-radius:8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          Hold Order
+        </button>
+
+      </div><!-- /pos-cart -->
+
+    </main>
+  </div><!-- /main-content -->
+</div><!-- /app-shell -->
+
+<!-- Clear Confirm Modal -->
+<div class="modal-overlay" id="clear-modal">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <h3>Clear Order</h3>
+      <button class="modal-close" onclick="closeModal('clear-modal')">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" style="text-align:center;padding:24px;">
+      <div style="width:56px;height:56px;background:var(--danger-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="var(--danger)" stroke-width="2" width="26" height="26"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
+      </div>
+      <p style="font-size:.9rem;color:var(--text-main);font-weight:600;">Are you sure you want to clear the current order?</p>
+      <p class="text-muted text-sm" style="margin-top:6px;">All items will be removed from the cart.</p>
+    </div>
+    <div class="modal-footer" style="justify-content:center;gap:10px;">
+      <button class="btn btn-secondary" onclick="closeModal('clear-modal')">Cancel</button>
+      <button class="btn btn-danger" id="confirm-clear-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="15" height="15"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
+        Clear Order
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Receipt Modal -->
+<div class="modal-overlay" id="receipt-modal">
+  <div class="modal" style="max-width:460px;">
+    <div class="modal-header">
+      <h3>Sale Completed</h3>
+      <button class="modal-close" onclick="closeModal('receipt-modal')">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="receipt-body">
+      <!-- Filled by JS -->
+    </div>
+    <div class="modal-footer" style="justify-content:center;gap:10px;">
+      <button class="btn btn-secondary" onclick="closeModal('receipt-modal');resetPOS();">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="15" height="15"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        New Sale
+      </button>
+      <button class="btn btn-primary" onclick="printReceipt()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="15" height="15"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print Receipt
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin .8s linear infinite; }
+</style>
+
+<script src="../js/app.js"></script>
+<script src="../js/pos.js"></script>
+</body>
+</html>

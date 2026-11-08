@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexander Shop — Customers</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand"><div class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff"><path d="M3 9h18L12 2 3 9zm0 0v11a1 1 0 001 1h5v-5h6v5h5a1 1 0 001-1V9"/></svg></div><div class="brand-text"><h1>Alexander</h1><span>Shop Management</span></div></div>
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Main Menu</span>
+      <a href="../index.html" class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a>
+      <a href="pos.html" class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>Sales / POS</a>
+      <a href="products.html" class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>Products</a>
+      <a href="purchases.html" class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M5 12H19M12 5l7 7-7 7"/></svg>Purchases</a>
+      <a href="customers.html" class="nav-item active"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Customers</a>
+      <a href="credits.html" class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Credits<span class="nav-badge">3</span></a>
+      <span class="nav-section-label">Analytics</span>
+      <a href="reports.html" class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Reports</a>
+      <span class="nav-section-label">System</span>
+      <a href="admin.html" class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>Administration</a>
+    </nav>
+    <div class="sidebar-footer"><div class="sidebar-user"><div class="user-avatar-sm">AO</div><div class="sidebar-user-info"><div class="name">Alexander O.</div><div class="role">Administrator</div></div></div></div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <div class="main-content">
+    <header class="topbar">
+      <button class="topbar-menu-btn" id="topbar-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <div class="topbar-title"><h2>Customers</h2><p>Manage customer accounts</p></div>
+      <div class="topbar-search"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="search" placeholder="Search customers…" /></div>
+      <div class="topbar-actions">
+        <button class="icon-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg><span class="notif-dot"></span></button>
+        <div class="topbar-divider"></div>
+        <div class="topbar-profile" id="profile-btn"><div class="avatar">AO</div><div class="profile-info"><div class="name">Alexander O.</div><div class="role">Administrator</div></div>
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>My Profile</div>
+            <div class="dropdown-separator"></div>
+            <div class="dropdown-item danger"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Sign Out</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="page-header">
+        <div class="page-header-left"><h1>Customers</h1><p>142 registered customers</p></div>
+        <div class="page-header-actions">
+          <button class="btn btn-primary" onclick="openModal('customer-modal')">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add Customer
+          </button>
+        </div>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stat-grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-bottom:20px;">
+        <div class="stat-card"><div class="stat-icon blue"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="stat-body"><div class="label">Total Customers</div><div class="value">142</div></div></div>
+        <div class="stat-card"><div class="stat-icon green"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="stat-body"><div class="label">Active</div><div class="value">138</div></div></div>
+        <div class="stat-card"><div class="stat-icon amber"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div class="stat-body"><div class="label">With Credits</div><div class="value">23</div></div></div>
+        <div class="stat-card"><div class="stat-icon red"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="stat-body"><div class="label">Total Credit Owed</div><div class="value">$1,240</div></div></div>
+      </div>
+
+      <!-- Table -->
+      <div class="section-block">
+        <div class="table-toolbar">
+          <div class="table-toolbar-left"><span class="table-title">All Customers</span></div>
+          <div class="table-toolbar-right">
+            <div class="search-box">
+              <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="search" id="cust-search" placeholder="Search name or phone…" />
+            </div>
+            <select class="filter-select">
+              <option>All Status</option>
+              <option>Active</option>
+              <option>Inactive</option>
+              <option>Has Credits</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrap" style="border:none;box-shadow:none;border-radius:0;margin-top:14px;">
+          <table id="customers-table">
+            <thead>
+              <tr><th>#</th><th>Customer Name</th><th>Phone</th><th>Email</th><th>Total Purchases</th><th>Outstanding Credit</th><th>Status</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="td-muted">001</td><td><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--primary);flex-shrink:0;">MS</div><strong>Maria Santos</strong></div></td><td class="td-muted">+1 555-0101</td><td class="td-muted">maria@email.com</td><td><strong>$1,250.00</strong></td><td style="color:var(--success);font-weight:600;">$0.00</td><td><span class="badge badge-success"><span class="badge-dot"></span>Active</span></td><td><div style="display:flex;gap:6px;"><button class="btn btn-secondary btn-sm" onclick="openModal('customer-modal')">View</button><button class="btn btn-secondary btn-sm" onclick="openModal('customer-modal')">Edit</button></div></td></tr>
+              <tr><td class="td-muted">002</td><td><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;background:var(--warning-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--warning);flex-shrink:0;">JD</div><strong>Juan Dela Cruz</strong></div></td><td class="td-muted">+1 555-0102</td><td class="td-muted">juan@email.com</td><td><strong>$3,800.00</strong></td><td style="color:var(--warning);font-weight:600;">$82.50</td><td><span class="badge badge-success"><span class="badge-dot"></span>Active</span></td><td><div style="display:flex;gap:6px;"><button class="btn btn-secondary btn-sm" onclick="openModal('customer-modal')">View</button><button class="btn btn-secondary btn-sm" onclick="openModal('customer-modal')">Edit</button></div></td></tr>
+              <tr><td class="td-muted">003</td><td><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;background:var(--danger-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--danger);flex-shrink:0;">AR</div><strong>Ana Reyes</strong></div></td><td class="td-muted">+1 555-0103</td><td class="td-muted">ana@email.com</td><td><strong>$920.00</strong></td><td style="color:var(--danger);font-weight:600;">$210.00</td><td><span class="badge badge-success"><span class="badge-dot"></span>Active</span></td><td><div style="display:flex;gap:6px;"><button class="btn btn-secondary btn-sm" onclick="openModal('customer-modal')">View</button><button class="btn btn-secondary btn-sm" onclick="openModal('customer-modal')">Edit</button></div></td></tr>
+              <tr><td class="td-muted">004</td><td><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;background:var(--primary-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--primary);flex-shrink:0;">CM</div><strong>Carlos Mendez</strong></div></td><td class="td-muted">+1 555-0104</td><td class="td-muted">carlos@email.com</td><td><strong>$2,100.00</strong></td><td style="color:var(--success);font-weight:600;">$0.00</td><td><span class="badge badge-success"><span class="badge-dot"></span>Active</span></td><td><div style="display:flex;gap:6px;"><button class="btn btn-secondary btn-sm">View</button><button class="btn btn-secondary btn-sm">Edit</button></div></td></tr>
+              <tr><td class="td-muted">005</td><td><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;background:var(--warning-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--warning);flex-shrink:0;">RL</div><strong>Rosa Lim</strong></div></td><td class="td-muted">+1 555-0105</td><td class="td-muted">rosa@email.com</td><td><strong>$4,520.00</strong></td><td style="color:var(--warning);font-weight:600;">$170.00</td><td><span class="badge badge-success"><span class="badge-dot"></span>Active</span></td><td><div style="display:flex;gap:6px;"><button class="btn btn-secondary btn-sm">View</button><button class="btn btn-secondary btn-sm">Edit</button></div></td></tr>
+              <tr><td class="td-muted">006</td><td><div style="display:flex;align-items:center;gap:10px;"><div style="width:32px;height:32px;background:#F1F5F9;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--secondary);flex-shrink:0;">BT</div><strong>Ben Torres</strong></div></td><td class="td-muted">+1 555-0106</td><td class="td-muted">ben@email.com</td><td><strong>$640.00</strong></td><td style="color:var(--success);font-weight:600;">$0.00</td><td><span class="badge badge-secondary"><span class="badge-dot"></span>Inactive</span></td><td><div style="display:flex;gap:6px;"><button class="btn btn-secondary btn-sm">View</button><button class="btn btn-secondary btn-sm">Edit</button></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <div class="pagination-info">Showing 1–6 of 142 customers</div>
+          <div class="pagination-btns">
+            <button class="page-btn" disabled>‹</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">›</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Customer Modal -->
+<div class="modal-overlay" id="customer-modal">
+  <div class="modal">
+    <div class="modal-header"><h3>Add New Customer</h3><button class="modal-close" onclick="closeModal('customer-modal')"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">First Name <span class="required">*</span></label><input type="text" class="form-control" placeholder="First name" /></div>
+        <div class="form-group"><label class="form-label">Last Name <span class="required">*</span></label><input type="text" class="form-control" placeholder="Last name" /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-control" placeholder="+1 555-0100" /></div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" placeholder="email@example.com" /></div>
+      </div>
+      <div class="form-group"><label class="form-label">Address</label><textarea class="form-control" placeholder="Customer address…"></textarea></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Credit Limit</label><input type="number" class="form-control" placeholder="0.00" /></div>
+        <div class="form-group"><label class="form-label">Status</label><select class="form-control"><option>Active</option><option>Inactive</option></select></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('customer-modal')">Cancel</button>
+      <button class="btn btn-primary" onclick="showToast('Customer saved','success');closeModal('customer-modal')">Save Customer</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+<script src="../js/app.js"></script>
+<script>setupTableSearch('cust-search','customers-table');</script>
+</body>
+</html>

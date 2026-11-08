@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexander Shop — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ═══════════════════════════════════════════
+       SIDEBAR
+  ═══════════════════════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- Brand -->
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h18L12 2 3 9zm0 0v11a1 1 0 001 1h5v-5h6v5h5a1 1 0 001-1V9"/></svg>
+      </div>
+      <div class="brand-text">
+        <h1>Alexander</h1>
+        <span>Shop Management</span>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Main Menu</span>
+
+      <a href="index.html" class="nav-item active" data-page="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+
+      <a href="pages/pos.html" class="nav-item" data-page="pos.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Sales / POS
+      </a>
+
+      <a href="pages/products.html" class="nav-item" data-page="products.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        Products
+      </a>
+
+      <a href="pages/purchases.html" class="nav-item" data-page="purchases.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M5 12H19M12 5l7 7-7 7"/></svg>
+        Purchases
+      </a>
+
+      <a href="pages/customers.html" class="nav-item" data-page="customers.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        Customers
+      </a>
+
+      <a href="pages/credits.html" class="nav-item" data-page="credits.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Credits
+        <span class="nav-badge">3</span>
+      </a>
+
+      <span class="nav-section-label">Analytics</span>
+
+      <a href="pages/reports.html" class="nav-item" data-page="reports.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Reports
+      </a>
+
+      <span class="nav-section-label">System</span>
+
+      <a href="pages/admin.html" class="nav-item" data-page="admin.html">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        Administration
+      </a>
+    </nav>
+
+    <!-- Footer -->
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="user-avatar-sm">AO</div>
+        <div class="sidebar-user-info">
+          <div class="name">Alexander O.</div>
+          <div class="role">Administrator</div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,.5)" stroke-width="2" width="14" height="14"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════ -->
+  <div class="main-content">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <button class="topbar-menu-btn" id="topbar-menu-btn" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+      <div class="topbar-title">
+        <h2>Dashboard</h2>
+        <p>Friday, October 2, 2026</p>
+      </div>
+
+      <div class="topbar-search">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" placeholder="Search anything…" aria-label="Search" />
+      </div>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" aria-label="Notifications">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          <span class="notif-dot"></span>
+        </button>
+        <button class="icon-btn" aria-label="Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </button>
+        <div class="topbar-divider"></div>
+        <div class="topbar-profile" id="profile-btn" role="button" tabindex="0" aria-label="User menu">
+          <div class="avatar">AO</div>
+          <div class="profile-info">
+            <div class="name">Alexander O.</div>
+            <div class="role">Administrator</div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12" style="color:var(--text-muted)"><path d="M6 9l6 6 6-6"/></svg>
+          <!-- Dropdown -->
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div class="dropdown-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              My Profile
+            </div>
+            <div class="dropdown-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+              Settings
+            </div>
+            <div class="dropdown-separator"></div>
+            <div class="dropdown-item danger">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              Sign Out
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1>Good morning, Alexander 👋</h1>
+          <p>Here's what's happening in your shop today.</p>
+        </div>
+        <div class="page-header-actions">
+          <a href="pages/pos.html" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            New Sale
+          </a>
+          <a href="pages/reports.html" class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            Reports
+          </a>
+        </div>
+      </div>
+
+      <!-- Stat Cards Row 1 -->
+      <div class="stat-grid">
+
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Today's Sales</div>
+            <div class="value">$1,248.50</div>
+            <div class="trend up">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" width="12" height="12"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              +12.4% from yesterday
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Cash Received</div>
+            <div class="value" style="color:var(--success)">$892.00</div>
+            <div class="sub">71.5% of total sales</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon amber">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Credit Sales</div>
+            <div class="value" style="color:var(--warning)">$356.50</div>
+            <div class="sub">28.5% of total sales</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon red">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Low Stock Items</div>
+            <div class="value" style="color:var(--danger)">5</div>
+            <div class="sub">Requires attention</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Row 2 — secondary stats -->
+      <div class="stat-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom:24px;">
+
+        <div class="stat-card">
+          <div class="stat-icon slate">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Transactions</div>
+            <div class="value">24</div>
+            <div class="sub">Today</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Customers</div>
+            <div class="value">142</div>
+            <div class="sub">Total registered</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Products</div>
+            <div class="value">386</div>
+            <div class="sub">In catalog</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon amber">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12H19M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Purchases</div>
+            <div class="value">$3,420</div>
+            <div class="sub">This month</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div class="stat-body">
+            <div class="label">Gross Profit</div>
+            <div class="value" style="color:var(--success)">$312.10</div>
+            <div class="sub">Today</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Two-column main area -->
+      <div class="dash-grid">
+
+        <!-- Recent Transactions -->
+        <div class="section-block">
+          <div class="section-header">
+            <div>
+              <h3>Recent Transactions</h3>
+              <p>Today's sales activity</p>
+            </div>
+            <a href="pages/pos.html" class="btn btn-secondary btn-sm">View All</a>
+          </div>
+          <div class="table-wrap" style="border:none;box-shadow:none;border-radius:0;">
+            <table id="recent-table">
+              <thead>
+                <tr>
+                  <th>Invoice</th>
+                  <th>Customer</th>
+                  <th>Time</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-mono">#INV-0024</td>
+                  <td>Maria Santos</td>
+                  <td class="td-muted">11:42 AM</td>
+                  <td><strong>$85.00</strong></td>
+                  <td><span class="badge badge-success"><span class="badge-dot"></span>Paid</span></td>
+                </tr>
+                <tr>
+                  <td class="td-mono">#INV-0023</td>
+                  <td>Juan Dela Cruz</td>
+                  <td class="td-muted">11:15 AM</td>
+                  <td><strong>$132.50</strong></td>
+                  <td><span class="badge badge-warning"><span class="badge-dot"></span>Partial</span></td>
+                </tr>
+                <tr>
+                  <td class="td-mono">#INV-0022</td>
+                  <td>Walk-in Customer</td>
+                  <td class="td-muted">10:58 AM</td>
+                  <td><strong>$47.25</strong></td>
+                  <td><span class="badge badge-success"><span class="badge-dot"></span>Paid</span></td>
+                </tr>
+                <tr>
+                  <td class="td-mono">#INV-0021</td>
+                  <td>Ana Reyes</td>
+                  <td class="td-muted">10:30 AM</td>
+                  <td><strong>$210.00</strong></td>
+                  <td><span class="badge badge-danger"><span class="badge-dot"></span>Unpaid</span></td>
+                </tr>
+                <tr>
+                  <td class="td-mono">#INV-0020</td>
+                  <td>Carlos Mendez</td>
+                  <td class="td-muted">09:55 AM</td>
+                  <td><strong>$65.75</strong></td>
+                  <td><span class="badge badge-success"><span class="badge-dot"></span>Paid</span></td>
+                </tr>
+                <tr>
+                  <td class="td-mono">#INV-0019</td>
+                  <td>Rosa Lim</td>
+                  <td class="td-muted">09:20 AM</td>
+                  <td><strong>$320.00</strong></td>
+                  <td><span class="badge badge-warning"><span class="badge-dot"></span>Partial</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div style="display:flex;flex-direction:column;gap:20px;">
+
+          <!-- Low Stock Alert -->
+          <div class="section-block">
+            <div class="section-header">
+              <div>
+                <h3>Low Stock Alert</h3>
+                <p>Products needing reorder</p>
+              </div>
+              <a href="pages/products.html" class="btn btn-secondary btn-sm">Manage</a>
+            </div>
+            <div class="section-body" style="padding:0;">
+              <div class="low-stock-list">
+
+                <div class="stock-item">
+                  <div class="stock-item-info">
+                    <div class="stock-item-name">Coca-Cola 1.5L</div>
+                    <div class="stock-item-sku text-muted text-sm">SKU-0042</div>
+                  </div>
+                  <div class="stock-item-qty">
+                    <span class="badge badge-danger">2 left</span>
+                  </div>
+                </div>
+
+                <div class="stock-item">
+                  <div class="stock-item-info">
+                    <div class="stock-item-name">Lays Classic 150g</div>
+                    <div class="stock-item-sku text-muted text-sm">SKU-0091</div>
+                  </div>
+                  <div class="stock-item-qty">
+                    <span class="badge badge-danger">3 left</span>
+                  </div>
+                </div>
+
+                <div class="stock-item">
+                  <div class="stock-item-info">
+                    <div class="stock-item-name">Detergent Bar 120g</div>
+                    <div class="stock-item-sku text-muted text-sm">SKU-0115</div>
+                  </div>
+                  <div class="stock-item-qty">
+                    <span class="badge badge-warning">5 left</span>
+                  </div>
+                </div>
+
+                <div class="stock-item">
+                  <div class="stock-item-info">
+                    <div class="stock-item-name">Bread Loaf 400g</div>
+                    <div class="stock-item-sku text-muted text-sm">SKU-0023</div>
+                  </div>
+                  <div class="stock-item-qty">
+                    <span class="badge badge-warning">4 left</span>
+                  </div>
+                </div>
+
+                <div class="stock-item">
+                  <div class="stock-item-info">
+                    <div class="stock-item-name">Shampoo Sachet 15ml</div>
+                    <div class="stock-item-sku text-muted text-sm">SKU-0088</div>
+                  </div>
+                  <div class="stock-item-qty">
+                    <span class="badge badge-danger">1 left</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Outstanding Credits -->
+          <div class="section-block">
+            <div class="section-header">
+              <div>
+                <h3>Outstanding Credits</h3>
+                <p>Unpaid / partially paid</p>
+              </div>
+              <a href="pages/credits.html" class="btn btn-secondary btn-sm">View All</a>
+            </div>
+            <div class="section-body" style="padding:0;">
+              <div class="credit-list">
+
+                <div class="credit-item">
+                  <div class="credit-info">
+                    <div class="credit-name">Ana Reyes</div>
+                    <div class="text-muted text-sm">Due: Oct 5, 2026</div>
+                  </div>
+                  <div class="credit-amount">
+                    <div class="amount text-danger font-bold">$210.00</div>
+                    <span class="badge badge-danger">Unpaid</span>
+                  </div>
+                </div>
+
+                <div class="credit-item">
+                  <div class="credit-info">
+                    <div class="credit-name">Juan Dela Cruz</div>
+                    <div class="text-muted text-sm">Due: Oct 3, 2026</div>
+                  </div>
+                  <div class="credit-amount">
+                    <div class="amount text-warning font-bold">$82.50</div>
+                    <span class="badge badge-warning">Partial</span>
+                  </div>
+                </div>
+
+                <div class="credit-item">
+                  <div class="credit-info">
+                    <div class="credit-name">Rosa Lim</div>
+                    <div class="text-muted text-sm">Due: Oct 7, 2026</div>
+                  </div>
+                  <div class="credit-amount">
+                    <div class="amount text-warning font-bold">$170.00</div>
+                    <span class="badge badge-warning">Partial</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /right col -->
+
+      </div><!-- /dash-grid -->
+
+    </main>
+  </div><!-- /main-content -->
+</div><!-- /app-shell -->
+
+<!-- Toast Container -->
+<div id="toast-container"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

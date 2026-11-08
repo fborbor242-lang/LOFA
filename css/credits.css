@@ -1,0 +1,119 @@
+/* ============================================================
+   CREDITS PAGE STYLES
+   ============================================================ */
+
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.credit-card-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-left-width: 4px;
+  transition: box-shadow var(--transition);
+}
+
+.credit-card-item:hover { box-shadow: var(--shadow-md); }
+
+.danger-border  { border-left-color: var(--danger); }
+.warning-border { border-left-color: var(--warning); }
+.success-border { border-left-color: var(--success); }
+
+.credit-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.credit-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.credit-avatar.danger  { background: var(--danger-light); color: var(--danger); }
+.credit-avatar.warning { background: var(--warning-light); color: #92400e; }
+.credit-avatar.success { background: var(--success-light); color: var(--success); }
+.credit-avatar.blue    { background: var(--primary-light); color: var(--primary); }
+
+.credit-card-name {
+  font-size: .87rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.credit-amounts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
+.credit-amount-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+  color: var(--text-muted);
+}
+
+.credit-amount-row.highlight {
+  padding-top: 8px;
+  margin-top: 4px;
+  border-top: 1px dashed var(--border);
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: .85rem;
+}
+
+.balance-big {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.balance-big.danger  { color: var(--danger); }
+.balance-big.warning { color: var(--warning); }
+.balance-big.success { color: var(--success); }
+
+/* Progress bar */
+.credit-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width .4s ease;
+}
+
+.credit-due-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .credits-grid { grid-template-columns: 1fr; }
+}
